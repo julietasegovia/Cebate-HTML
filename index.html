@@ -1,37 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cebate</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebate</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 
-<body class="bg-gray-100"></body>
+<body class="bg-gray-100">
     <header class="bg-green-600 text-white p-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Cebate.</h1>
-    <nav>
-        <ul class="flex space-x-4">
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://www.x.com" target="_blank">X</a>
-        </ul>
-    </nav>
+        <h1 class="text-xl font-bold">Cebate.</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#quienes" class="hover:underline">Quiénes somos</a></li>
+                <li><a href="#contenido" class="hover:underline">Contenido</a></li>
+                <li><a id="contactLink" class="cursor-pointer hover:underline">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="bg-green-700 text-white p-2 flex justify-center space-x-6 font-mono">
-        <li><a href="#quienes" class="hover:underline">Quiénes somos</a></li>
-        <li><a href="#contenido" class="hover:underline">Contenido</a></li>
-        <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+        <li><a href="https://www.instagram.com" target="_blank" class="hover:underline">Instagram</a></li>
+        <li><a href="https://www.facebook.com" target="_blank" class="hover:underline">Facebook</a></li>
+        <li><a href="https://www.x.com" target="_blank" class="hover:underline">X</a></li>
     </div>
 
-    <section class="flex items-center justify-center h-[20vh] bg-gray-100">
-        <h2 class="text-5xl font-bold text-green-800 text-center">Bienvenido a Cebate.</h2>
+    <section id="quienes-somos" class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-green-800 text-center mb-8">¿Quiénes somos?</h2>
+    <p class="text-center text-gray-800 mb-8">
+        Somos un grupo de estudiantes del politecnico apasionados por lo social y el estudio. Creemos en el poder de la <span class="font-medium text-green-600">colaboracion</span> y en crear espacios donde todos puedan <span class="font-medium text-green-600">aprender y disfrutar</span> al mismo tiempo. Nuestro proyecto nace del interés por compartir experiencias, combinando nuestras ganas de crecer académicamente con el deseo de generar momentos significativos con los que nos rodean.
+    </p>
+    <div class="bg-white p-6 rounded-lg shadow text-center">
+      <h3 class="text-2xl font-semibold mb-3">Nuestra motivación</h3>
+      <p class="text-green-900">
+        La vida se trata de <span class="font-medium text-green-600">momentos compartidos</span>. Con nuestros mates, cada sorbo es una excusa para conversar y crear recuerdos junto a amigos y compañeros de estudio. Pensado especialmente para estudiantes, promocionamos, no un mate, sino un momento, la alegria de compartir. Acompañamos largas jornadas de clases, trabajos en grupo y tardes de estudio, convirtiendo cada pausa en un instante de conexión y buena energía. Despues de pasar horas sentado, rindiendo examenes y estudiando mucho (como siempre), quien no quiere una buena ronda de mates y una charla con sus amigos?
+        Creemos que el trabajo en equipo y la innovación son la clave para crecer.
+      </p>
+    </div>
+  </section>
+
+<section id="contenido" class="py-12 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-800 text-center mb-10">Nuestros Productos</h2>
+    <h3 class="text-l font-bold text-green-800 text-center mb-10">Si te interesa algo usa el botón de contacto</h3>
+    
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Producto 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="w-full aspect-square bg-gray-100">
+          <img src="mate-huevito.jpg" alt="Mate tradicional" class="w-full h-full object-contain">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Mate Tradicional</h3>
+          <p class="text-gray-600 mt-2">De calabaza, con virola de aluminio. El clásico de siempre.</p>
+          <p class="text-green-700 font-bold mt-4">$3.500</p>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="w-full aspect-square bg-gray-100">
+          <img src="termo.jpeg" alt="Termo de acero" class="w-full h-full object-contain">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Termo de Acero</h3>
+          <p class="text-gray-600 mt-2">1 litro, mantiene el agua caliente más de 12 horas.</p>
+          <p class="text-green-700 font-bold mt-4">$8.200</p>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="w-full aspect-square bg-gray-100">
+          <img src="bombilla.jpeg" alt="Bombilla de acero" class="w-full h-full object-contain">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Bombilla de Acero</h3>
+          <p class="text-gray-600 mt-2">Con resorte desmontable para una limpieza sencilla.</p>
+          <p class="text-green-700 font-bold mt-4">$1.200</p>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="w-full aspect-square bg-gray-100">
+          <img src="yerba.jpeg" alt="Yerba mate" class="w-full h-full object-contain">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Yerba Mate Premium</h3>
+          <p class="text-gray-600 mt-2">Sabor intenso y duradero, seleccionada artesanalmente.</p>
+          <p class="text-green-700 font-bold mt-4">$2.400</p>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="w-full aspect-square bg-gray-100">
+          <img src="equipomate.jpeg" alt="Kit matero" class="w-full h-full object-contain">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Kit Matero Completo</h3>
+          <p class="text-gray-600 mt-2">Incluye mate, bombilla, termo y bolso matero.</p>
+          <p class="text-green-700 font-bold mt-4">$12.000</p>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="w-full aspect-square bg-gray-100">
+          <img src="bolsomatero.jpeg" alt="Bolso matero" class="w-full h-full object-contain">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Bolso Matero</h3>
+          <p class="text-gray-600 mt-2">Práctico y resistente, ideal para llevar todo el set.</p>
+          <p class="text-green-700 font-bold mt-4">$5.800</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nota aclaratoria -->
+    <p class="text-center text-sm text-gray-500 mt-8">
+      Las imágenes son ilustrativas y fueron generadas con inteligencia artificial.
+    </p>
+
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+
+    <section id="contacto" class="py-12 bg-gray-100 hidden">
+        <div class="w-full max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-gray-800 mb-8">Formulario de Contacto</h2>
+
+            <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="nombre">Nombre</label>
+                        <input class="w-full px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200" id="nombre" type="text" placeholder="Juan">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="apellido">Apellido</label>
+                        <input class="w-full px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200" id="apellido" type="text" placeholder="Pérez">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email</label>
+                        <input class="w-full px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200" id="email" type="email" placeholder="juan.perez@ejemplo.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="whatsapp">WhatsApp</label>
+                        <input class="w-full px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200" id="whatsapp" type="tel" placeholder="11 1234 5678">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <input class="w-full px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200" id="fecha-nacimiento" type="date">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="genero">Género</label>
+                        <div class="relative">
+                            <select class="block w-full px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 appearance-none transition duration-200" id="genero">
+                                <option>Seleccionar</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Otro</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="comentarios">Comentarios</label>
+                    <textarea class="w-full h-32 px-4 py-2.5 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 resize-none transition duration-200" id="comentarios" placeholder="Escribe aquí tus comentarios..."></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1" for="curriculum">Adjuntar Currículum (PDF)</label>
+                    <input class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100 transition duration-200" id="curriculum" type="file" accept=".pdf">
+                </div>
+
+                <div class="flex justify-center">
+                    <button id="sendButton" type="button" class="w-full md:w-auto px-8 py-3 bg-green-600 text-white font-bold rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
+                <div class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-sm">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center animate-bounce-in">
+                        <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-2">¡Formulario Enviado!</h3>
+                    <p class="text-gray-600 mb-6">Revisa tu cliente de correo para completar el envío. Si no ves la ventana, por favor hazlo manualmente.</p>
+                    <button onclick="hideMessage()" class="px-6 py-2.5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-colors">
+                        Entendido
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="flex items-center justify-center h-[1vh] bg-gray-100">
-        <h2 class="text-xl text-green-800 text-center">Mucho mas que solo mate</h2>
-    </section>
+    <script>
+        // Mostrar el formulario y hacer scroll suave
+        document.getElementById('contactLink').addEventListener('click', function() {
+            const contactSection = document.getElementById('contacto');
+            if (contactSection.classList.contains('hidden')) {
+                contactSection.classList.remove('hidden');
+            }
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        });
 
+
+    // Función original para enviar el formulario por correo
+    document.getElementById('sendButton').addEventListener('click', function() {
+        const nombre = document.getElementById('nombre').value.trim();
+        const apellido = document.getElementById('apellido').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const whatsapp = document.getElementById('whatsapp').value.trim();
+        const fechaNacimiento = document.getElementById('fecha-nacimiento').value.trim();
+        const genero = document.getElementById('genero').value;
+        const comentarios = document.getElementById('comentarios').value.trim();
+
+        if (!nombre || !apellido || !email) {
+            alert('Por favor, completa los campos de nombre, apellido y email.');
+            return;
+        }
+
+        const subject = `Contacto de ${nombre} ${apellido}`;
+        const body = `Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nFecha de Nacimiento: ${fechaNacimiento}\nGénero: ${genero}\n\nComentarios:\n${comentarios}`;
+
+        window.location.href = `mailto:manu.gave08@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        document.getElementById('successMessage').classList.remove('hidden');
+    });
+
+    function hideMessage() {
+        document.getElementById('successMessage').classList.add('hidden');
+    }
+</script>
+
+</body>
+</html>
