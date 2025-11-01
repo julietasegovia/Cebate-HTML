@@ -27,12 +27,18 @@
       </button>
 
       <div id="cart-modal"
-        class="hidden fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-50 flex flex-col">
+        class="hidden fixed top-0 right-0 w-96 h-full bg-white shadow-2xl z-50 flex flex-col text-gray-800">
         <div class="flex justify-between items-center p-4 bg-green-600 text-white">
           <h2 class="text-lg font-semibold">Tu Carrito</h2>
           <button id="close-cart" class="text-2xl font-bold">×</button>
         </div>
         <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-2"></div>
+        
+        <div id="cart-total-container" class="p-4 border-t border-gray-200">
+            <p class="text-xl font-bold flex justify-between">
+                Total: <span id="cart-total">$0</span>
+            </p>
+        </div>
         <div class="p-4 border-t flex justify-between">
           <button id="clear-cart"
             class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Vaciar</button>
@@ -49,11 +55,11 @@
         <li><a href="quienes-somos.html" class="hover:underline">Quiénes somos</a></li>
         <li><a href="contenido.html" class="hover:underline">Combos</a></li>
         <li><a href="contenidoalt.html" class="hover:underline">Mates</a></li>
-        <li><a href="contacto.html" id="contactLink" class="hover:underline cursor-pointer">Contacto</a></li>
+        <li><a href="#contacto" id="contactLink" class="hover:underline cursor-pointer">Contacto</a></li>
     </ul>
   </nav>
 
-  <section id="contacto" class="py-12 bg-gray-100"> 
+  <section id="contacto" class="py-12 bg-gray-100 hidden">
     <div class="w-full max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
       <h2 class="text-3xl md:text-4xl font-extrabold text-center text-gray-800 mb-8">Formulario de Contacto</h2>
 
@@ -158,15 +164,12 @@
   </section>
 
   <script>
-    // Mostrar el formulario y hacer scroll (función mantenida para el click desde otras páginas)
+    // Mostrar el formulario y hacer scroll
     document.getElementById('contactLink').addEventListener('click', function (e) {
-      // Solo previene el comportamiento por defecto y hace scroll si el link NO es la página actual
-      if (window.location.pathname.endsWith('contacto.html') || window.location.pathname.endsWith('/')) {
-        e.preventDefault();
-        const contactSection = document.getElementById('contacto');
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      // NOTA: En este archivo (contacto.html), la sección ya es visible por defecto (se quitó la clase 'hidden')
+      e.preventDefault();
+      const contactSection = document.getElementById('contacto');
+      contactSection.classList.remove('hidden');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     });
 
     // Enviar el formulario por correo
@@ -187,12 +190,8 @@
       const subject = `Contacto de ${nombre} ${apellido}`;
       const body = `Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nFecha de Nacimiento: ${fechaNacimiento}\nGénero: ${genero}\n\nComentarios:\n${comentarios}`;
 
-      // Se ejecuta el mailto. La ejecución del script se detiene aquí hasta que el usuario interactúa.
-      // La siguiente línea (mostrar mensaje de éxito) podría no ejecutarse en todos los navegadores/clientes.
       window.location.href = `mailto:manu.gave08@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      // Se muestra el mensaje de éxito. Esto tiene una alta probabilidad de no ejecutarse en muchos navegadores.
-      // Se advierte al usuario en el mensaje de éxito sobre la posible necesidad de hacerlo manualmente.
       document.getElementById('successMessage').classList.remove('hidden');
     });
 

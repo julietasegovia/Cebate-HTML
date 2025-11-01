@@ -28,12 +28,18 @@
       </button>
 
       <div id="cart-modal"
-        class="hidden fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-50 flex flex-col">
+        class="hidden fixed top-0 right-0 w-96 h-full bg-white shadow-2xl z-50 flex flex-col text-gray-800">
         <div class="flex justify-between items-center p-4 bg-green-600 text-white">
           <h2 class="text-lg font-semibold">Tu Carrito</h2>
           <button id="close-cart" class="text-2xl font-bold">×</button>
         </div>
         <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-2"></div>
+        
+        <div id="cart-total-container" class="p-4 border-t border-gray-200">
+            <p class="text-xl font-bold flex justify-between">
+                Total: <span id="cart-total">$0</span>
+            </p>
+        </div>
         <div class="p-4 border-t flex justify-between">
           <button id="clear-cart" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Vaciar</button>
           <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Finalizar</button>
@@ -80,7 +86,8 @@
                         <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$25.000</span>
                             <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                                data-name="Combo Mate + Bombilla Clásico" data-price="25000">
+                                data-name="Combo Mate + Bombilla Clásico" data-price="25000"
+                                data-image="https://http2.mlstatic.com/D_NQ_NP_681266-MLA82651578794_032025-O.webp">
                                 Agregar al carrito
                             </button>
                         </div>
@@ -107,7 +114,8 @@
                         <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$51.971</span>
                             <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                                data-name="Combo Mate + Bombilla Premium" data-price="51971">
+                                data-name="Combo Mate + Bombilla Premium" data-price="51971"
+                                data-image="https://http2.mlstatic.com/D_NQ_NP_923912-MLA82612766292_032025-O.webp">
                                 Agregar al carrito
                             </button>
                         </div>
@@ -138,7 +146,8 @@
                         <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$79.012</span>
                             <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                                data-name="Kit Completo" data-price="79012">
+                                data-name="Kit Completo" data-price="79012"
+                                data-image="https://http2.mlstatic.com/D_NQ_NP_816254-MLA87322082426_072025-O.webp">
                                 Agregar al carrito
                             </button>
                         </div>
@@ -170,7 +179,8 @@
                         <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$9.650</span>
                             <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                                data-name="Yerbas Premium" data-price="9650">
+                                data-name="Yerbas Premium" data-price="9650"
+                                data-image="https://http2.mlstatic.com/D_NQ_NP_844794-MLU78367714285_082024-O.webp">
                                 Agregar al carrito
                             </button>
                         </div>
