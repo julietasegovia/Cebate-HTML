@@ -12,6 +12,7 @@
 
     <header class="bg-green-600 text-white p-4 flex justify-between items-center">
     <h1 class="text-xl font-bold">Cebate.</h1>
+
     <nav>
         <ul class="flex space-x-4">
         <a href="https://www.instagram.com/cebate_shop/" target="_blank">Instagram</a>
@@ -19,26 +20,48 @@
         <a href="https://x.com/cebate_" target="_blank">X</a>
         </ul>
     </nav>
+
+    <div class="relative">
+      <button id="cart-btn" class="relative text-white text-2xl">
+        🛒
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">0</span>
+      </button>
+
+      <div id="cart-modal"
+        class="hidden fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-50 flex flex-col">
+        <div class="flex justify-between items-center p-4 bg-green-600 text-white">
+          <h2 class="text-lg font-semibold">Tu Carrito</h2>
+          <button id="close-cart" class="text-2xl font-bold">×</button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-2"></div>
+        <div class="p-4 border-t flex justify-between">
+          <button id="clear-cart" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Vaciar</button>
+          <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Finalizar</button>
+        </div>
+      </div>
+    </div>
     </header>
 
-    <div class="bg-green-700 text-white p-2 flex justify-center space-x-6 font-mono">
-        <li><a href="index.html" class="hover:underline">Inicio</a></li>
-        <li><a href="quienes-somos.html" class="hover:underline">Quiénes somos</a></li>
-        <li><a href="contenido.html" class="hover:underline">Combos</a></li>
-        <li><a href="contenidoalt.html" class="hover:underline">Mates</a></li>
-        <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
-    </div>
+    <nav class="bg-green-700 text-white p-2 flex justify-center space-x-6 font-mono">
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:underline">Inicio</a></li>
+            <li><a href="quienes-somos.html" class="hover:underline">Quiénes somos</a></li>
+            <li><a href="contenido.html" class="hover:underline">Combos</a></li>
+            <li><a href="contenidoalt.html" class="hover:underline">Mates</a></li>
+            <li><a href="contacto.html" class="hover:underline">Contacto</a></li>
+        </ul>
+    </nav>
 
     <section id="contenido" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-green-800 text-center mb-10">Nuestros Combos</h2>
-                <p class="text-l font-bold text-green-800 text-center mb-10">
-                    Porque no somos solo mates.
-                </p>
+                <p class="text-l font-bold text-green-800 text-center mb-10">Porque no somos solo mates.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
+
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <div class="h-48 flex items-center justify-center bg-white">
                         <img src="https://http2.mlstatic.com/D_NQ_NP_681266-MLA82651578794_032025-O.webp" alt="Producto 1" class="h-40 object-contain" />
@@ -53,11 +76,18 @@
                                 <li>• Bombilla acero inox</li>
                             </ul>
                         </div>
-                        <div class="flex justify-between items-center">
+
+                        <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$25.000</span>
+                            <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                data-name="Combo Mate + Bombilla Clásico" data-price="25000">
+                                Agregar al carrito
+                            </button>
                         </div>
+
                     </div>
                 </div>
+
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <div class="h-48 flex items-center justify-center bg-white">
@@ -73,11 +103,18 @@
                                 <li>• Bombilla alpaca</li>
                             </ul>
                         </div>
-                        <div class="flex justify-between items-center">
+
+                        <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$51.971</span>
+                            <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                data-name="Combo Mate + Bombilla Premium" data-price="51971">
+                                Agregar al carrito
+                            </button>
                         </div>
+
                     </div>
                 </div>
+
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <div class="h-48 flex items-center justify-center bg-white">
@@ -86,6 +123,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-green-800 mb-2">Kit Completo</h3>
                         <p class="text-gray-600 mb-4">Set matero con bolso, yerbera y azucarera. Todo lo que necesitás para el mate perfecto.</p>
+
                         <div class="mb-3">
                             <span class="text-sm text-gray-500">Incluye:</span>
                             <ul class="text-sm text-gray-600 ml-2">
@@ -96,11 +134,18 @@
                                 <li>• Yerbera y azucarera</li>
                             </ul>
                         </div>
-                        <div class="flex justify-between items-center">
+
+                        <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$79.012</span>
+                            <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                data-name="Kit Completo" data-price="79012">
+                                Agregar al carrito
+                            </button>
                         </div>
+
                     </div>
                 </div>
+
 
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <div class="h-48 flex items-center justify-center bg-white">
@@ -109,6 +154,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-green-800 mb-2">Yerbas Premium</h3>
                         <p class="text-gray-600 mb-4">Selección exclusiva de yerbas.  Sabores únicos y auténticos.</p>
+
                         <div class="mb-3">
                             <span class="text-sm text-gray-500">Yerbas disponibles:</span>
                             <ul class="text-sm text-gray-600 ml-2">
@@ -120,12 +166,23 @@
                                 <li>• Yerba Cebate.</li>
                             </ul>
                         </div>
-                        <div class="flex justify-between items-center">
+
+                        <div class="flex flex-col items-start gap-2">
                             <span class="text-2xl font-bold text-green-600">$9.650</span>
+                            <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                data-name="Yerbas Premium" data-price="9650">
+                                Agregar al carrito
+                            </button>
                         </div>
+
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
+
+    <script src="carrito.js"></script>
 </body>
+</html>
